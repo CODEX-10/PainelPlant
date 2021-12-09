@@ -1,0 +1,171 @@
+/***
+   Rui Santos
+   Complete project details at https://RandomNerdTutorials.com
+***/
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  background: #00101d;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  margin-top: 1rem;
+}
+h1 > span:first-child {
+  font-size: clamp(1rem, 11vw, 4rem);
+  color: #fff;
+  font-weight: bold;
+  text-transform: lowercase;
+  opacity: 0.75;
+}
+h1 > span:last-child {
+  font-size: clamp(2rem, 15vw, 6rem);
+  color: lightgreen;
+  text-transform: capitalize;
+  font-family: "Lobster", cursive;
+  text-shadow: 0px 0px 100px lightgreen;
+}
+
+.content {
+  width: 85%;
+  max-width: 33rem;
+  height: 100%;
+  margin: auto;
+}
+
+.circle {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  background: radial-gradient(
+    circle at 50% -20.71%,
+    #fff 0%,
+    #cbffcb 25%,
+    #79c879 50%,
+    #5b8b5b 75%,
+    #263d26 100%
+  );
+  border-radius: 50%;
+  opacity: 0.75;
+  margin: 28rem auto 0;
+  box-shadow: 0px 0px 30rem 1rem #cbffcb;
+}
+
+.header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 4rem auto;
+}
+
+.lamp.success {
+  opacity: 1;
+  box-shadow: 0px 0px 25px 1px yellow;
+}
+.lamp {
+  width: 5rem;
+  height: 5rem;
+  background: yellow;
+  opacity: 0.3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease 0.3s;
+}
+.lamp > img {
+  width: 2.5rem;
+}
+
+.stage.success {
+  opacity: 1;
+  box-shadow: 0px 0px 35px 3px lightgreen;
+}
+.stage {
+  opacity: 0.3;
+  width: 6.5rem;
+  height: 6.5rem;
+  background: lightgreen;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease 0.3s;
+}
+.stage > img {
+  width: 4rem;
+}
+
+.water.success {
+  opacity: 1;
+  box-shadow: 0px 0px 35px 3px #8c85ff;
+}
+.water {
+  width: 5rem;
+  height: 5rem;
+  background: #8c85ff;
+  opacity: 0.3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease 0.3s;
+}
+.water > img {
+  width: 2.5rem;
+}
+
+.altura,
+.luminosidade {
+  width: 100%;
+  height: 10rem;
+  background: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.title {
+  opacity: 0.6;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+p {
+  display: flex;
+  align-items: center;
+}
+#height,
+#luminosity {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.units {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
