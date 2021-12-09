@@ -80,50 +80,6 @@
     xhttp.send();
   }, 1000 ) ;
 
-  setInterval(function ( ) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function ( ) {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("luminosity").innerHTML = this.responseText;
-        if(document.getElementById("luminosity").innerHTML > 900) {
-          document.getElementById("lamp").classList.add("success");
-        } else if (document.getElementById("luminosity").innerHTML < 900){
-          document.getElementById("lamp").classList.remove("success");
-        }
-      }
-    };
-    xhttp.open("GET", "/luminosity", true);
-    xhttp.send();
-  }, 1000 ) ;
-
-  // function getWater() {
-  //   var xhttp = new XMLHttpRequest();
-  //   var elem = document.getElementById("water");   
-  //   var timer = 0;
-  //   var id = setInterval(frame, 1000);
-  //   function frame() {
-  //     if (timer == 40) {
-  //       timer = 0;
-  //     } else if (timer > 9) {
-  //         timer++;
-  //         console.log("remove");
-  //         elem.classList.remove("success"); 
-  //         xhttp.open("GET", "/stopWater", true);
-  //         xhttp.send();
-  //       } else if (timer <= 9) {
-  //           timer++; 
-  //           console.log("add");
-  //           elem.classList.add("success"); 
-  //           xhttp.open("GET", "/getWater", true);
-  //           xhttp.send();
-  //         }
-  //   }
-  // }
-
-  // setInterval(function ( ) {
-  //   getWater();
-  // }, 30000 );
-
   var xhttp = new XMLHttpRequest();
     var elem = document.getElementById("water");   
     var timer = 0;
